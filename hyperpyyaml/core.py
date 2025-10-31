@@ -719,7 +719,7 @@ def _ast_eval(node):
 
     # Compatibility check for Python versions
     # In Python 3.8, ast.Num was deprecated and replaced by ast.Constant.
-    if sys.version_info >= (3, 8):
+    if sys.version_info >= (3, 8): 
         if isinstance(node, ast.Constant):  # <number>, <string>, <bool>, <None>
             return node.value
     else:
